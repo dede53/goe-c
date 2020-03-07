@@ -51,43 +51,16 @@ int main(){
         }
     }
 
-    // printf("Erstes:\n");
-    // for(int i = 0; i < matrix1y; i++){
-    //     for(int j = 0; j < matrix1x; j++){
-    //         printf("%d ", matrix1[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
-    // printf("Zweites:\n");
-    // for(int i = 0; i < matrix2y; i++){
-    //     for(int j = 0; j < matrix2x; j++){
-    //         printf("%d ", matrix2[i][j]);
-    //     }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
-
+    // multiply
     int result[matrix1y][matrix2x];
-
     for(int i = 0; i < matrix1y; i++){
         for(int j = 0; j < matrix2x; j++){
             int sum = 0;
             for(int k = 0; k < matrix2y; k++){
-                // printf("%d * %d", matrix1[i][k], matrix2[k][j]);
-                // if(k < matrix2y -1){
-                //     printf(" + ");
-                // }
-                sum = sum + matrix1[i][k] * matrix2[k][j];
+                sum += matrix1[i][k] * matrix2[k][j];
             }
-            // printf(" = %d \t", sum);
-            // printf("i = %d; j = %d\n", i, j);
             result[i][j] = sum;
         }
-
-        // printf("\n");
     }
 
     for(int i = 0; i < matrix1y; i++){
